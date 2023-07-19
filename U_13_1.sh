@@ -25,6 +25,7 @@ for file_chk in $FILES; do
                                 fi
                         done
                 fi
+                # Check SUID, SGID, Sticky bit
                 perm_chk=`ls -alL $file_chk | awk '{ print $1 }' | grep -i 's'`
                 echo "`ls -al $file_chk`" >> $RESULT_FILE 2>&1
                 echo "`ls -al $file_chk`" >> $RESULT_FILE 2>&1
